@@ -1,0 +1,20 @@
+{
+  "name": "web-security-database",
+  "version": "1.0.0",
+  "description": "MongoDB integration for Web Security Analysis Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/ingest-data.js",
+    "test": "node scripts/test-connection.js",
+    "ingest": "node scripts/ingest-data.js"
+  },
+  "keywords": ["mongodb", "security", "codeql"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^8.0.0",
+    "dotenv": "^16.3.1",
+    "@octokit/rest": "^20.0.0"
+  }
+}
+
