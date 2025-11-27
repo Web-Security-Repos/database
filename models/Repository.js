@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 const repositorySchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
-    index: true
+    required: true
   },
   full_name: {
     type: String,
@@ -53,7 +52,8 @@ const repositorySchema = new mongoose.Schema({
     default: null
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  autoIndex: false  // Disable automatic index building
 });
 
 repositorySchema.index({ name: 1 });

@@ -49,11 +49,11 @@ const analysisSchema = new mongoose.Schema({
     default: false
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  autoIndex: false  // Disable automatic index building
 });
 
 analysisSchema.index({ repository: 1, created_at: -1 });
-analysisSchema.index({ analysis_id: 1 });
 analysisSchema.index({ commit_sha: 1 });
 
 module.exports = mongoose.model('Analysis', analysisSchema);

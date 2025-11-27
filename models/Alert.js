@@ -19,8 +19,7 @@ const alertSchema = new mongoose.Schema({
   },
   rule_id: {
     type: String,
-    required: true,
-    index: true
+    required: true
   },
   rule_description: {
     type: String,
@@ -40,8 +39,7 @@ const alertSchema = new mongoose.Schema({
   state: {
     type: String,
     enum: ['open', 'dismissed', 'fixed'],
-    default: 'open',
-    index: true
+    default: 'open'
   },
   location: {
     path: {
@@ -94,7 +92,8 @@ const alertSchema = new mongoose.Schema({
     default: null
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  autoIndex: false  // Disable automatic index building
 });
 
 alertSchema.index({ repository: 1, security_severity: 1 });

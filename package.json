@@ -8,13 +8,16 @@
     "test": "node scripts/test-connection.js",
     "ingest": "node scripts/ingest-data.js"
   },
-  "keywords": ["mongodb", "security", "codeql"],
+  "keywords": [
+    "mongodb",
+    "security",
+    "codeql"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^8.0.0",
+    "@octokit/rest": "^20.1.2",
     "dotenv": "^16.3.1",
-    "@octokit/rest": "^20.0.0"
+    "mongoose": "^8.0.0"
   }
 }
-
